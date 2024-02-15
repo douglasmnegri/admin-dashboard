@@ -7,7 +7,7 @@
   --ligt-blue: #668fff;
   --medium-blue: #463bfa;
   --dark-blue: #1e22ff;
-  --background-grey: #F2F5FA;
+  --background-grey: #f2f5fa;
   --main-font: "Montserrat", sans-serif;
 }
 
@@ -44,11 +44,17 @@
 }
 
 .search-user {
-  align-self: center;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-self: right;
-  gap: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search img {
+  width: 2em;
+}
+
+.profile-picture img {
+  width: 2em;
 }
 
 ul {
@@ -58,18 +64,19 @@ ul {
 .logo {
   grid-row: 1 / 2;
   background-color: var(--dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .block img {
-  width: calc(10vw - 10px);
+  width: 12em;
 }
 
 .sidebar {
-  font-size: 18px;
   font-weight: 500;
   grid-row: 2 / 3;
   font-family: var(--main-font);
-  font-weight: bolder;
   background-color: var(--medium-blue);
 }
 
@@ -77,16 +84,19 @@ ul {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
+  color: white;
+  font-weight: bolder;
+  font-size: 18px;
 }
 
 .sidebar-content li img {
-  width: 16px;
+  width: 20px;
   padding-right: 5px;
 }
 
 .article {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 2fr 1fr;
   margin: auto;
   background-color: var(--background-grey);
   font-family: var(--main-font);
@@ -95,6 +105,7 @@ ul {
 h1 {
   text-align: left;
 }
+
 .main-content {
   grid-column: 1 / 2;
   display: grid;
@@ -105,13 +116,14 @@ h1 {
   border: solid var(--ligt-blue);
   background-color: whitesmoke;
   border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .main-content img {
-  width: 80%;
+  width: 90%;
   height: auto;
 }
-
 
 .title {
   font-size: 24px;
