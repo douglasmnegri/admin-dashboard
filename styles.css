@@ -4,7 +4,7 @@
 }
 
 :root {
-  --ligt-blue: #668fff;
+  --light-blue: #668fff;
   --medium-blue: #463bfa;
   --dark-blue: #1e22ff;
   --background-grey: #f2f5fa;
@@ -14,9 +14,9 @@
 .container {
   text-align: center;
   display: grid;
+  height: 100vh;
   grid-template-columns: 2fr 8fr;
   grid-template-rows: 1fr 8fr;
-  height: 100vh;
   background-color: var(--background-grey);
 }
 
@@ -26,8 +26,7 @@
 
 .header {
   font-family: var(--main-font);
-  font-size: 16px;
-  background-color: var(--ligt-blue);
+  background-color: var(--light-blue);
   grid-column: 2 / 3;
   display: grid;
   grid-template-columns: 3fr 2fr;
@@ -43,6 +42,12 @@
   justify-content: space-evenly;
 }
 
+a {
+  color: white;
+  font-weight: bold;
+  font-size: 2vh;
+}
+
 .search-user {
   display: flex;
   justify-content: center;
@@ -51,10 +56,12 @@
 
 .search img {
   width: 2em;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
+    hue-rotate(0deg);
 }
 
 .profile-picture img {
-  width: 2em;
+  width: 2.5em;
 }
 
 ul {
@@ -86,7 +93,7 @@ ul {
   grid-template-rows: repeat(5, 1fr);
   color: white;
   font-weight: bolder;
-  font-size: 18px;
+  font-size: 2vh;
 }
 
 .sidebar-content li img {
@@ -96,50 +103,50 @@ ul {
 
 .article {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  margin: auto;
+  grid-template-columns: 3fr 1fr;
   background-color: var(--background-grey);
   font-family: var(--main-font);
-}
-
-h1 {
-  text-align: left;
+  height: fit-content;
 }
 
 .main-content {
-  grid-column: 1 / 2;
-  display: grid;
-  gap: 50px;
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
 }
 
 .main-content > div {
-  border: solid var(--ligt-blue);
+  border: solid var(--light-blue);
   background-color: whitesmoke;
   border-radius: 15px;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .main-content img {
-  width: 90%;
+  width: 80%;
   height: auto;
 }
 
 .title {
-  font-size: 24px;
+  font-size: 2.5vh;
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 0.5em;
 }
 
 .small-content {
-  grid-column: 2/ 3;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
 }
 
 .small-content .feed {
-  border: solid var(--ligt-blue);
+  border: solid var(--light-blue);
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 1.25vh;
   border-left-width: 15px;
-  margin: 5px;
 }
